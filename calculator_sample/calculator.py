@@ -66,7 +66,8 @@ def calculation_result():
 
 if __name__ == '__main__':
     # displaying the error on the webpage
-    Flask_App.debug = True
-    Flask_App.run()
+    #Flask_App.debug = True
+    port = int(os.environ.get("PORT", 5000))
+    Flask_App.run(debug=True,host='0.0.0.0',port=port)
 
   
